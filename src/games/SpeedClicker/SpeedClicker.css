@@ -1,0 +1,305 @@
+/* Reflex Rush Cyber Clicker Styles */
+
+.speed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.12) 0%, rgba(11, 14, 23, 0.96) 80%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 35px rgba(16, 185, 129, 0.15);
+  box-sizing: border-box;
+}
+
+.speed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.speed-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.speed-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 24, 43, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.speed-stat-badge.timer { color: #00f0ff; }
+.speed-stat-badge.score { color: #10b981; }
+.speed-stat-badge.combo { color: #f59e0b; }
+.speed-stat-badge.high { color: #c084fc; }
+
+.speed-stat-badge strong {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-left: 2px;
+}
+
+.speed-sound-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.speed-sound-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #10b981;
+}
+
+/* Arena */
+.speed-arena {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 340px;
+  background: 
+    linear-gradient(rgba(11, 14, 23, 0.94), rgba(11, 14, 23, 0.94)),
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(16, 185, 129, 0.08) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(16, 185, 129, 0.08) 40px);
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: crosshair;
+  user-select: none;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.arena-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(11, 14, 23, 0.88);
+  backdrop-filter: blur(4px);
+  padding: 24px;
+  text-align: center;
+  z-index: 10;
+}
+
+.pulse-icon {
+  margin-bottom: 12px;
+  animation: pulseRotate 2.5s infinite ease-in-out;
+}
+
+.pulse-icon.cyan { color: #00f0ff; }
+
+.overlay-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.overlay-desc {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  max-width: 420px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.btn-start-rush {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  color: #0b0e17;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-start-rush:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(16, 185, 129, 0.6);
+}
+
+.tier-badge {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 6px 18px;
+  border-radius: 30px;
+  border: 2px solid;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.gameover-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 22px 0;
+  width: 100%;
+  max-width: 380px;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.m-label {
+  display: block;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.m-val {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.text-cyan { color: #00f0ff; }
+.text-gold { color: #f59e0b; }
+.text-purple { color: #c084fc; }
+
+/* Cyber Target Nodes */
+.cyber-target {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: targetPop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.target-normal {
+  background: radial-gradient(circle, #00f0ff 0%, #0284c7 80%);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+}
+
+.target-gold {
+  background: radial-gradient(circle, #facc15 0%, #ea580c 80%);
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.9);
+}
+
+.target-core {
+  font-size: 1.2rem;
+  color: #0b0e17;
+  font-weight: 900;
+}
+
+.target-pulse-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.7;
+  animation: targetRing 0.8s infinite linear;
+}
+
+.target-normal .target-pulse-ring { color: #00f0ff; }
+.target-gold .target-pulse-ring { color: #facc15; }
+
+/* Actions */
+.speed-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-rush-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-rush-control.primary {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  color: #0b0e17;
+}
+
+.btn-rush-control.reset {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.speed-legend {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: flex;
+  gap: 12px;
+}
+
+.gold-text {
+  color: #facc15;
+}
+
+@keyframes targetPop {
+  0% { transform: translate(-50%, -50%) scale(0.2); }
+  80% { transform: translate(-50%, -50%) scale(1.15); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes targetRing {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes pulseRotate {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.08) rotate(15deg); }
+}

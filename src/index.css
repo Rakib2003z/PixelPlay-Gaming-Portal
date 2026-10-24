@@ -1,0 +1,149 @@
+/* ==========================================================================
+   PIXELPLAY — GLOBAL STYLES & DESIGN TOKENS
+   Master CSS for University Lab Gaming Portal
+   ========================================================================== */
+
+:root {
+  /* Dark Navy Backgrounds */
+  --bg-deep: #070a13;
+  --bg-base: #0b0e17;
+  --bg-surface: #11162a;
+  --bg-elevated: #161e38;
+  --bg-glass: rgba(17, 22, 42, 0.85);
+
+  /* Vibrant Neon Accents */
+  --neon-cyan: #00f0ff;
+  --neon-cyan-dark: #06b6d4;
+  --neon-purple: #a855f7;
+  --neon-violet: #7c3aed;
+  --neon-gold: #facc15;
+  --neon-amber: #f59e0b;
+  --neon-red: #ef4444;
+  --neon-emerald: #10b981;
+  --neon-rose: #ec4899;
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow-cyan: rgba(0, 240, 255, 0.35);
+  --border-glow-purple: rgba(168, 85, 247, 0.35);
+  --shadow-lg: 0 15px 35px -5px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(0, 240, 255, 0.25);
+
+  /* Fonts */
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.06) 0px, transparent 50%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+/* App Shell Layout */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content-body {
+  flex: 1;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--neon-cyan);
+  transition: color 0.2s ease;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+/* Accessible focus outlines */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+/* Utility Animations */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(0, 240, 255, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.3); }
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Touch targets for accessibility */
+button, a {
+  min-height: 38px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}

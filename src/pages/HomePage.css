@@ -1,0 +1,134 @@
+/* Home Page Styles */
+
+.homepage-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.home-content-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-categories-section {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title-with-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.section-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.section-badge.hot {
+  background: rgba(249, 115, 22, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  color: #fb923c;
+}
+
+.section-badge.new {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  color: #00f0ff;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.title-icon.cyan { color: #00f0ff; }
+.title-icon.orange { color: #f97316; }
+.title-icon.purple { color: #a855f7; }
+
+.section-count {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.section-view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #00f0ff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.section-view-all-link:hover {
+  color: #38bdf8;
+  transform: translateX(4px);
+}
+
+.btn-clear-cat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-clear-cat:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Games Grid */
+.games-grid-section {
+  margin-bottom: 48px;
+}
+
+.games-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .home-content-container {
+    padding: 0 16px;
+  }
+  .games-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

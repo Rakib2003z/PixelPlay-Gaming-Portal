@@ -1,0 +1,213 @@
+/* Search Page Styles */
+
+.search-page-root {
+  min-height: 100vh;
+  padding: 24px 0 60px 0;
+}
+
+.search-page-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.search-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.search-hero-box {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, rgba(18, 24, 43, 0.8) 80%);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 20px;
+  padding: 36px 30px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.search-page-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.search-page-form {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-page-icon {
+  position: absolute;
+  left: 18px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.search-page-input {
+  width: 100%;
+  background: rgba(11, 14, 23, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 14px 20px 14px 52px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.05rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-page-input:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.btn-search-execute {
+  background: linear-gradient(135deg, #00f0ff 0%, #3b82f6 100%);
+  color: #0b0e17;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-search-execute:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.55);
+}
+
+.search-cat-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-right: 4px;
+}
+
+.search-filter-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.search-filter-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.search-filter-pill.active {
+  background: #00f0ff;
+  color: #0b0e17;
+  font-weight: 800;
+  border-color: #00f0ff;
+}
+
+/* Results Meta */
+.search-results-meta {
+  margin-bottom: 24px;
+}
+
+.results-count-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.results-count-title strong {
+  color: #00f0ff;
+}
+
+/* Results Grid */
+.search-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Empty State */
+.search-empty-state {
+  background: #11162a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.empty-icon {
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.empty-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  max-width: 540px;
+  margin: 0 auto 36px auto;
+  line-height: 1.5;
+}
+
+.empty-suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .search-page-container {
+    padding: 0 16px;
+  }
+  .search-hero-box {
+    padding: 24px 16px;
+  }
+  .search-page-form {
+    flex-direction: column;
+  }
+  .btn-search-execute {
+    width: 100%;
+  }
+}
